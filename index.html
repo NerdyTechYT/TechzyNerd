@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>TechzyNerd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Extra page-specific styling */
+
+    body {
+      background: linear-gradient(135deg, #e5ffff 0%, #c6f0f3 100%);
+      color: #0b3d2c;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding-bottom: 40px;
+    }
+
+    main.content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .title {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 0.5em;
+      color: #155724;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .p-1 {
+      font-size: 1.15rem;
+      max-width: 750px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+      color: #155724dd;
+    }
+
+    .recentP,
+    .YT {
+      text-align: center;
+      color: #0b3d2c;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .text-1 {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      color: #0b3d2ccc;
+      font-style: italic;
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+
+    /* Video Gallery */
+    .video-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 10px;
+    }
+
+    .video-card {
+      background: #ffffffcc;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 77, 77, 0.15);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .video-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0, 77, 77, 0.3);
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 ratio */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-description {
+      padding: 15px 20px;
+      font-weight: 600;
+      color: #0b3d2c;
+      font-size: 1rem;
+      text-align: center;
+      background-color: #e5ffffdd;
+      border-top: 1px solid #a5d6a7;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .title {
+        font-size: 2.2rem;
+      }
+
+      .recentP,
+      .YT {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <h2 class="logo"><a href="index.html">TechzyNerd</a></h2>
+      <ul class="nav-links">
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Videos.html">Videos</a></li>
+         <li><a href="Project.html">Project</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="content">
+    <h1 class="title">Welcome to TechzyNerd</h1>
+
+    <p class="p-1">
+      Hello! My name is Nisar, and I am passionate about Computer Science — it’s my favorite thing in the world.
+      My journey in CS is driven by curiosity, resilience, and a strong desire to learn and grow.
+      This website is a glimpse into my experiences, projects, and the exciting path I'm taking in the world
+      of technology.
+    </p>
+
+    <h2 class="recentP">Recent Learning</h2>
+    <p class="text-1">I am learning HTML and CSS. Here's the video I'm following:</p>
+
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/HGTJBPNC-Gw?si=_kqAywkhuk_GEm8D&amp;controls=0"
+        title="HTML & CSS Learning Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+
+    <h2 class="YT">YouTube</h2>
+
+    <!-- Video Gallery -->
+    <section class="video-gallery">
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/TT0wYXMHTuQ" title="Build a Website with ChatGPT"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="video-description">Build a Website with ChatGPT in 3 Minutes (Step-by-Step Tutorial)</p>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/At_EIu4UmF8" title="Make a Game Using AI"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="video-description">Part 1: How to Make a Game Using AI — Free & No Coding Needed</p>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/t9Bp9xkpxqo" title="Create Gmail Account"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="video-description">How to create a Gmail account?</p>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
