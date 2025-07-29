@@ -1,103 +1,113 @@
-/* Body */
-body {
-    background-color: #e5ffff;
+/* ------------------ RESET & BASE ------------------ */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
-/* Title */
-.title {
-    font-weight: bold;
-    text-align: center;
-    font-size: 3em;
-    margin-top: 20px;
-}
-
-/* Paragraph */
-.p-1 {
-    max-width: 700px;
-    margin: 20px auto;
-    text-align: center;
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #e5ffff;
+    color: #333;
     line-height: 1.6;
-    font-weight: normal;
 }
 
-/* Navigation Bar */
+/* ------------------ NAVIGATION ------------------ */
 .navbar {
     background-color: #006666;
-    color: white;
-    padding: 15px 20px;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Navbar Container */
 .navbar .container {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Logo */
 .logo a {
-    font-size: 1.5em;
+    font-size: 1.8rem;
     font-weight: bold;
     color: white;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .logo a:hover {
     color: yellowgreen;
 }
 
-/* Nav Links */
-.navbar .nav-links {
+.nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
-    margin: 0;
-    padding: 0;
 }
 
-.navbar .nav-links li a {
+.nav-links li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 8px 12px;
+    border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
 
-.navbar .nav-links li a:hover {
+.nav-links li a:hover,
+.nav-links li a.active {
     background-color: #004d4d;
-    border-radius: 5px;
     color: #e5ffff;
 }
 
-/* Video Container */
+/* ------------------ PAGE TITLE ------------------ */
+.title {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 30px 0 20px;
+    color: #004d4d;
+}
+
+/* ------------------ PARAGRAPH TEXT ------------------ */
+.p-1 {
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 0 20px;
+}
+
+.recentP {
+    text-align: center;
+    font-size: 1.6em;
+    color: #004d4d;
+    margin-top: 40px;
+}
+
+.text-1 {
+    text-align: center;
+    font-family: cursive;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* ------------------ YOUTUBE SECTION ------------------ */
+.YT {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #155724;
+    margin: 50px 0 20px;
+}
+
+/* ------------------ VIDEO SECTION ------------------ */
 .video-container {
     max-width: 560px;
     margin: 20px auto;
     text-align: center;
 }
-
-.recentP {
-    text-align: center;
-    font-size: 1.5em;
-    color: #004d4d;
-}
-
-
-.text-1 {
-    text-align: center;
-    font-family: "cursive";
-}
-
-.YT {
-    text-align: center;
-    font-weight: bold;
-    font-size: 3em;
-    text-decoration: underline;
-}
-
 
 .video-gallery {
     display: flex;
@@ -138,4 +148,98 @@ body {
     font-weight: bold;
     color: #004d4d;
     text-align: center;
+}
+
+/* ------------------ ABOUT SECTION (Optional Reuse) ------------------ */
+.about-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.about-section h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.about-card {
+    background-color: #ffffff;
+    border-left: 5px solid #a5d6a7;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-3px);
+}
+
+.about-card h2 {
+    color: #388e3c;
+    margin-bottom: 10px;
+}
+
+
+/* ---------- CONTACT PAGE ---------- */
+.contact-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.contact-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #004d4d;
+}
+
+.form-group label span {
+    color: crimson;          /* marks required fields */
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px 14px;
+    font-size: 1rem;
+    border: 1px solid #b2dfdb;
+    border-radius: 6px;
+    background-color: #f8ffff;
+    transition: border 0.25s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #006666;
+}
+
+.btn-primary {
+    align-self: flex-start;
+    background-color: #006666;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #004d4d;
 }
