@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Under Maintenance</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 3em;
+      border-radius: 16px;
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+      animation: fadeIn 1.5s ease-in-out;
+      max-width: 500px;
+    }
+
+    .gear {
+      font-size: 4rem;
+      animation: spin 4s linear infinite;
+      margin-bottom: 1em;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5em;
+      color: #00ffff;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 1.5em;
+    }
+
+    .countdown {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #00ffcc;
+    }
+
+    .note {
+      margin-top: 2em;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 2em;
+        margin: 1em;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .gear {
+        font-size: 3rem;
+      }
+
+      .countdown {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="gear">⚙️</div>
+    <h1>I'll Be Back Soon!</h1>
+    <p>My website is undergoing scheduled maintenance.<br />Countdown to relaunch:</p>
+    <div class="countdown" id="countdown">Loading...</div>
+    <div class="note">— TechzyNerd 🚀</div>
+  </div>
+
+  <script>
+    // Set countdown to 2 hours from now
+    const targetTime = new Date(Date.now() + 2 * 60 * 60 * 1000);
+
+    const countdownEl = document.getElementById('countdown');
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetTime - now;
+
+      if (diff <= 0) {
+        countdownEl.innerHTML = "We're back!";
+        clearInterval(timer);
+        return;
+      }
+
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      countdownEl.innerHTML = 
+        `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    updateCountdown(); // Initial call
+    const timer = setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>

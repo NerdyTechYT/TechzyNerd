@@ -1,0 +1,538 @@
+/* ------------------ RESET & BASE ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #e5ffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ------------------ NAVIGATION ------------------ */
+.navbar {
+    background-color: #006666;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.logo a:hover {
+    color: yellowgreen;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background-color: #004d4d;
+    color: #e5ffff;
+}
+
+/* ------------------ PAGE TITLE ------------------ */
+.title {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 30px 0 20px;
+    color: #004d4d;
+}
+
+/* ------------------ PARAGRAPH TEXT ------------------ */
+.p-1 {
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 0 20px;
+}
+
+.recentP {
+    text-align: center;
+    font-size: 1.6em;
+    color: #004d4d;
+    margin-top: 40px;
+}
+
+.text-1 {
+    text-align: center;
+    font-family: cursive;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* ------------------ YOUTUBE SECTION ------------------ */
+.YT {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #155724;
+    margin: 50px 0 20px;
+}
+
+/* ------------------ VIDEO SECTION ------------------ */
+.video-container {
+    max-width: 560px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.video-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+    background-color: #f0fafa;
+}
+
+.video-card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-description {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #004d4d;
+    text-align: center;
+}
+
+/* ------------------ ABOUT SECTION (Optional Reuse) ------------------ */
+.about-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.about-section h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.about-card {
+    background-color: #ffffff;
+    border-left: 5px solid #a5d6a7;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-3px);
+}
+
+.about-card h2 {
+    color: #388e3c;
+    margin-bottom: 10px;
+}
+
+
+/* ---------- CONTACT PAGE ---------- */
+.contact-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.contact-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #004d4d;
+}
+
+.form-group label span {
+    color: crimson;          /* marks required fields */
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px 14px;
+    font-size: 1rem;
+    border: 1px solid #b2dfdb;
+    border-radius: 6px;
+    background-color: #f8ffff;
+    transition: border 0.25s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #006666;
+}
+
+.btn-primary {
+    align-self: flex-start;
+    background-color: #006666;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #004d4d;
+}
+
+
+
+/* ------------------ RECENT PROJECT ------------------ */
+.project-section {
+  margin-top: 60px;
+  padding: 0 20px;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0fafa;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.project-description {
+  font-size: 1.8em;
+  color: #0b3d2c;
+  max-width: 500px;
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-title {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #155724;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-description {
+    text-align: center;
+  }
+}
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+.project-card {
+  background: #ffffffcc;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 77, 77, 0.1);
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0, 77, 77, 0.2);
+}
+
+.project-title {
+  font-size: 1.8rem;
+  color: #155724;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.project-date {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #3a7669;
+  margin-bottom: 15px;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  color: #0b3d2c;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.project-link {
+  align-self: flex-start;
+  color: #006666;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.project-link:hover {
+  color: #004d4d;
+  border-color: #004d4d;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .project-title {
+    font-size: 1.5rem;
+  }
+  .project-description {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* HTMl Page
+  /* Extra page-specific styling */
+
+    body {
+      background: linear-gradient(135deg, #e5ffff 0%, #c6f0f3 100%);
+      color: #0b3d2c;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding-bottom: 40px;
+    }
+
+    main.content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .title {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 0.5em;
+      color: #155724;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .p-1 {
+      font-size: 1.15rem;
+      max-width: 750px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+      color: #155724dd;
+    }
+
+    .recentP,
+    .YT {
+      text-align: center;
+      color: #0b3d2c;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .text-1 {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      color: #0b3d2ccc;
+      font-style: italic;
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+
+    /* Video Gallery */
+    .video-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 10px;
+    }
+
+    .video-card {
+      background: #ffffffcc;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 77, 77, 0.15);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .video-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0, 77, 77, 0.3);
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 ratio */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-description {
+      padding: 15px 20px;
+      font-weight: 600;
+      color: #0b3d2c;
+      font-size: 1rem;
+      text-align: center;
+      background-color: #e5ffffdd;
+      border-top: 1px solid #a5d6a7;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .title {
+        font-size: 2.2rem;
+      }
+
+      .recentP,
+      .YT {
+        font-size: 1.6rem;
+      }
+    }
+
+
+    
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+
+/* Maintenance */
+.maintenance-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.maintenance-box {
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+}
+
+.maintenance-box h1 {
+  color: #00ffff;
+  font-size: 2rem;
+}
+
